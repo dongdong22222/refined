@@ -1,0 +1,544 @@
+/* Mobile-First CSS với tone vàng */
+:root {
+  --gold-primary: #FFD700;
+  --gold-dark: #C5A42B;
+  --gold-light: #FFE87C;
+  --gold-accent: #FFC000;
+  --dark: #1A1A1A;
+  --light: #FFF9E6;
+  --gray: #E0E0E0;
+  --shadow: 0 2px 8px rgba(194, 158, 0, 0.15);
+  --transition: all 0.25s ease;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  color: var(--dark);
+  background: var(--light);
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--gold-dark);
+}
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.3rem; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Navigation - Mobile Optimized */
+.navbar {
+  background: var(--gold-primary);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--dark);
+  padding: 0.3rem 0.5rem;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: block;
+}
+
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--gold-light);
+  flex-direction: column;
+  list-style: none;
+  box-shadow: var(--shadow);
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links li {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.nav-links a {
+  display: block;
+  padding: 1rem;
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  background: rgba(255, 215, 0, 0.3);
+}
+
+/* Hero Section - Mobile Optimized */
+.hero {
+  position: relative;
+  height: 50vh;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) sepia(0.3) hue-rotate(5deg) saturate(1.5);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 90%;
+  padding: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Sections - Mobile Layout */
+section {
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+section:nth-child(even) {
+  background: rgba(255, 215, 0, 0.05);
+}
+
+h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gold-primary);
+  margin: 0.5rem auto 1.5rem;
+}
+
+/* Guide Container - Mobile Grid */
+.guide-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.guide-box {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.guide-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.guide-box h3 {
+  padding: 0.8rem 1rem 0;
+}
+
+.guide-box p {
+  padding: 0.8rem 1rem 1.2rem;
+}
+
+/* Arrival Services - Mobile Layout */
+.arrival-pricing {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.arrival-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--gold-primary);
+}
+
+.arrival-box h3 {
+  margin-bottom: 0.8rem;
+}
+
+.arrival-box strong {
+  color: var(--gold-accent);
+  font-size: 1.3rem;
+}
+
+.arrival-process {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin-top: 1.5rem;
+}
+
+.arrival-process ol {
+  padding-left: 1.2rem;
+}
+
+.arrival-process li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.2rem;
+}
+
+.arrival-process li::before {
+  content: '•';
+  color: var(--gold-primary);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* SIM Card Section - Mobile Layout */
+.sim-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.sim-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.sim-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sim-info {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.sim-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.sim-table th, .sim-table td {
+  padding: 0.6rem;
+  border-bottom: 1px solid var(--gray);
+}
+
+.sim-table th {
+  background: var(--gold-light);
+}
+
+.sim-button {
+  display: inline-block;
+  background: var(--gold-primary);
+  color: var(--dark);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Car Service Table - Mobile Scroll */
+.car-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+}
+
+.car-table {
+  min-width: 600px;
+  border-collapse: collapse;
+}
+
+.car-table th, .car-table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gray);
+}
+
+.car-table th {
+  background: var(--gold-primary);
+}
+
+.car-table tr:nth-child(even) {
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.car-note {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Footer - Mobile Layout */
+footer {
+  background: var(--gold-primary);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.social-icons a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.copyright {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 480px) {
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1.2rem; }
+}
+
+@media (min-width: 768px) {
+  html { font-size: 17px; }
+  
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    position: static;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    box-shadow: none;
+  }
+  
+  .nav-links li {
+    border-bottom: none;
+  }
+  
+  .nav-links a {
+    padding: 0.5rem 1rem;
+  }
+  
+  .guide-container,
+  .arrival-pricing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .sim-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hero {
+    height: 70vh;
+    max-height: 600px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.5rem;
+  }
+  
+  .guide-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .arrival-pricing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Touch Enhancements */
+button, a, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Prevent zoom on input focus */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+/* Tăng kích thước tap target */
+a, button, .sim-button, .menu-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ngăn chặn highlight khi tap */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+/* Mobile First (1 cột) */
+.guide-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.guide-box {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(197, 164, 43, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.guide-box:hover {
+  transform: translateY(-5px);
+}
+
+.guide-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--gold-primary);
+}
+
+.guide-box h3 {
+  padding: 1rem 1rem 0;
+  color: var(--gold-dark);
+  font-size: 1.1rem;
+}
+
+.guide-box p {
+  padding: 0.8rem 1rem 1.2rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Tablet (2 cột) */
+@media (min-width: 600px) {
+  .guide-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (4 cột) */
+@media (min-width: 992px) {
+  .guide-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .guide-box img {
+    height: 200px;
+  }
+}
+
+/* Hiệu ứng đặc biệt */
+.guide-box:nth-child(1) {
+  border-top: 4px solid #EE0033; /* Màu VietJet */
+}
+
+.guide-box:nth-child(2) {
+  border-top: 4px solid #EE0033; /* Màu VietJet */
+}
+
+.guide-box:nth-child(3) {
+  border-top: 4px solid #F5A623; /* Màu Vietnam Airlines */
+}
+
+.guide-box:nth-child(4) {
+  border-top: 4px solid var(--gold-accent); /* Màu quốc tế */
+}
