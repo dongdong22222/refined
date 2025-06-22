@@ -21,12 +21,21 @@
       <img src="images/logo-text-white.png" alt="VIP Airport Services Logo">
     </div>
     <div class="nav-menu">
-      <ul class="nav-links">
-        <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
-        <li><a href="#taxi-guide"><i class="fas fa-map-marked-alt"></i> Airport Guide</a></li>
-        <li><a href="#footer"><i class="fas fa-headset"></i> Contact</a></li>
-      </ul>
-    </div>
+  <ul class="nav-links">
+    <li><a href="#services" id="menu-services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+    <li><a href="#taxi-guide" id="menu-guide"><i class="fas fa-map-marked-alt"></i> Airport Guide</a></li>
+    <li><a href="#footer" id="menu-contact"><i class="fas fa-headset"></i> Contact</a></li>
+    <li>
+      <select id="languageSelect" onchange="changeLanguage()" class="lang-select">
+        <option value="en">English</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="zh">中文</option>
+        <option value="ko">한국어</option>
+      </select>
+    </li>
+  </ul>
+</div>
+
     <div class="nav-toggle" onclick="toggleMenu()">
       <div class="bar1"></div>
       <div class="bar2"></div>
@@ -514,5 +523,38 @@
     });
   });
 </script>
+<script>
+  const translations = {
+    en: {
+      services: "Services",
+      guide: "Airport Guide",
+      contact: "Contact"
+    },
+    vi: {
+      services: "Dịch vụ",
+      guide: "Hướng dẫn sân bay",
+      contact: "Liên hệ"
+    },
+    zh: {
+      services: "服务",
+      guide: "机场指引",
+      contact: "联系"
+    },
+    ko: {
+      services: "서비스",
+      guide: "공항 안내",
+      contact: "연락처"
+    }
+  };
+
+  function changeLanguage() {
+    const lang = document.getElementById("languageSelect").value;
+    const t = translations[lang];
+    document.getElementById("menu-services").innerHTML = `<i class="fas fa-concierge-bell"></i> ${t.services}`;
+    document.getElementById("menu-guide").innerHTML = `<i class="fas fa-map-marked-alt"></i> ${t.guide}`;
+    document.getElementById("menu-contact").innerHTML = `<i class="fas fa-headset"></i> ${t.contact}`;
+  }
+</script>
+
 </body>
 </html>
