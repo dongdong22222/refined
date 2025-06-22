@@ -2,237 +2,517 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>VIP Airport Services | Tan Son Nhat Premium Assistance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#FFD700"> <!-- Màu thanh địa chỉ trên mobile -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <title>Airport Services</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preload" href="images/anhchinh.jpg" as="image">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 </head>
 <body>
 
-<!-- Navigation Menu -->
+<!-- NAVIGATION -->
 <nav class="navbar">
-  <div class="logo">VIP AIRPORT</div>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#taxi-guide">Driver Guide</a></li>
-    <li><a href="#arrival-service">Arrival Service</a></li>
-    <li><a href="#fasttrack">Fast Track</a></li>
-    <li><a href="#sim">SIM Card</a></li>
-    <li><a href="#car-service">Intercity Transport</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <div class="nav-container">
+    <div class="nav-logo">
+      <img src="images/logo-text-white.png" alt="VIP Airport Services Logo">
+    </div>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+        <li><a href="#taxi-guide"><i class="fas fa-map-marked-alt"></i> Airport Guide</a></li>
+        <li><a href="#footer"><i class="fas fa-headset"></i> Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-toggle" onclick="toggleMenu()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </div>
 </nav>
 
-<!-- Hero Image -->
+<!-- HERO SECTION -->
 <section class="hero">
-  <img src="images/anhchinh.jpg" alt="VIP Airport Services">
-  <div class="hero-text">
-    <h1>Welcome to VIP Airport Services</h1>
-    <p>Transfers, fast-track immigration, SIM cards, and more!</p>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Premium Airport Assistance<br>at Tan Son Nhat International</h1>
+    <p class="hero-subtitle">Experience seamless travel with our VIP concierge services</p>
+    <div class="hero-buttons">
+      <a href="#services" class="cta-btn primary-btn"><i class="fas fa-star"></i> View Services</a>
+      <a href="tel:+84867706788" class="cta-btn secondary-btn"><i class="fas fa-phone-alt"></i> Call Now</a>
+    </div>
   </div>
 </section>
 
-<!-- Introduction -->
-<header>
-  <h1>Airport Services – Cars – SIM</h1>
-  <p>Airport transfers, immigration assistance, Fast Track, SIM cards, and intercity transport</p>
-</header>
-
-<section id="taxi-guide">
-  <h2>Driver Guide at Tan Son Nhat Airport</h2>
-  
+<!-- DRIVER GUIDE SECTION -->
+<section id="taxi-guide" class="section-padding">
+  <div class="section-header">
+    <h2>Airport Pickup Guide</h2>
+    <p class="section-subtitle">Clear instructions for drivers at all terminals</p>
+  </div>
   <div class="guide-container">
-    <!-- VietJet Domestic T1 -->
-    <div class="guide-box">
-      <h3>VietJet Domestic (T1) + (T2)</h3>
-      <img src="images/Domestic T1 + T2 (VietJet).jpg" alt="VietJet pickup at Domestic Terminal 1" loading="lazy" />
-      <p>Pickup at Terminal 1, Gate A3. Look for passengers near baggage claim area 1. Contact 15 mins before arrival.</p>
-    </div>
-
-    <!-- VietJet Domestic T2 -->
-    
-
-    <!-- Vietnam Airlines T3 -->
-    <div class="guide-box">
-      <h3>Vietnam Airlines (T3)</h3>
-      <img src="images/Domestic T3 (VN Airline) 1.jpg" alt="Vietnam Airlines pickup at Terminal 3" loading="lazy" />
-      <p>New Terminal 3, Gate D2. Park at dedicated lane 3. Check passenger's booking code.</p>
-    </div>
-
-    <!-- International Terminal -->
-    <div class="guide-box">
+     <div class="guide-box">
+      <div class="terminal-label international">International</div>
       <h3>International Terminal</h3>
-      <img src="images/International.jpg" alt="International terminal pickup" loading="lazy" />
-      <p>Arrival Hall D1. Hold sign with passenger name + flight number. Meet at column 8 if delayed.</p>
+      <div class="guide-image-container">
+        <img src="images/internal.jpg" alt="International Terminal Guide" class="guide-image">
+        <div class="image-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="guide-details">
+        <p><i class="fas fa-map-marker-alt"></i> Arrival Hall D1, Column 8</p>
+        <p><i class="fas fa-info-circle"></i> Name sign provided for easy identification</p>
+        <div class="duration-badge">
+          <i class="far fa-clock"></i> FULL DAY SERVICE
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<section id="arrival-service">
-  <h2>Arrival Assistance Services</h2>
-
-  <div class="arrival-pricing">
-    <div class="arrival-box">
-      <h3>Standard Fast Track</h3>
-      <p>Price: <strong>500,000 VND</strong></p>
-      <p>Immigration within 15 minutes with assistance at the checkpoint.</p>
+    <div class="guide-box">
+      <div class="terminal-label domestic">Domestic</div>
+      <h3>VietJet (T1 & T2)</h3>
+      <div class="guide-image-container">
+        <img src="images/internalfake.jpg" alt="VietJet Pickup Guide" class="guide-image">
+        <div class="image-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="guide-details">
+        <p><i class="fas fa-map-marker-alt"></i> Pick up at Gate A3 or Lane 3</p>
+        <p><i class="fas fa-info-circle"></i> Easily visible and convenient location</p>
+        <div class="duration-badge">
+          <i class="far fa-clock"></i> HALF DAY SERVICE
+        </div>
+      </div>
     </div>
-    <div class="arrival-box">
-      <h3>VIP Fast Track</h3>
-      <p>Price: <strong>800,000 VND</strong></p>
-      <p>Priority immigration within 15 minutes and luggage assistance at the exit.</p>
-    </div>
-  </div>
-
-  <div class="arrival-process">
-    <h3>Fast Track Procedure</h3>
-    <ol>
-      <li>Staff holding a name sign meets passengers at the visa checkpoint area.</li>
-      <li>Assist with visa stamping or quick immigration process.</li>
-      <li>Escort guests through a priority lane for immigration.</li>
-      <li>Assist with luggage and bid farewell at the exit gate.</li>
-    </ol>
-  </div>
-</section>
-
-<section id="sim">
-  <h2>Tourist SIM Card</h2>
-  <div class="sim-container">
     
-    <div class="sim-image">
-      <img src="images/sim.jpg" alt="Airport tourist SIM card" />
+    <div class="guide-box">
+      <div class="terminal-label domestic">Domestic</div>
+      <h3>Vietnam Airlines (T3)</h3>
+      <div class="guide-image-container">
+        <img src="images/t3.jpg" alt="Vietnam Airlines Pickup Guide" class="guide-image">
+        <div class="image-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="guide-details">
+        <p><i class="fas fa-map-marker-alt"></i> Designated pickup point at T3</p>
+        <p><i class="fas fa-info-circle"></i> Easy to recognize with clear signage</p>
+        <div class="duration-badge">
+          <i class="far fa-clock"></i> FULL DAY SERVICE
+        </div>
+      </div>
     </div>
+    
+   
+  </div>
+</section>
 
-    <div class="sim-info">
-      <p class="sim-description">
-        Buy a SIM at the airport – high-speed 5G, delivered in person
-      </p>
+<!-- SERVICE PACKAGES -->
+<section id="services" class="section-padding">
+  <div class="section-header">
+    <h2>Premium Service Packages</h2>
+    <p class="section-subtitle">Tailored solutions for discerning travelers</p>
+  </div>
+  
+  <div class="service-grid">
+    <!-- FAST TRACK -->
+    <div class="service-box">
+      <div class="service-icon">
+        <i class="fas fa-walking"></i>
+      </div>
+      <h3>FAST TRACK SERVICE</h3>
+      <div class="price-tag">500 000 VND</div>
+      <ul class="service-features">
+        <li><i class="fas fa-check-circle"></i> Priority security clearance</li>
+        <li><i class="fas fa-check-circle"></i> Express immigration processing</li>
+        <li><i class="fas fa-check-circle"></i> Dedicated staff assistance</li>
+      </ul>
+      <a href="#footer" class="service-btn">Enquire Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+    
+    <!-- VIP FAST TRACK -->
+    <div class="service-box featured">
+      <div class="service-icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <h3>VIP FAST TRACK</h3>
+      <div class="price-tag">800 000 VND</div>
+      <ul class="service-features">
+        <li><i class="fas fa-check-circle"></i> Personal concierge service</li>
+        <li><i class="fas fa-check-circle"></i> Check-in & baggage assistance</li>
+        <li><i class="fas fa-check-circle"></i> Lounge access (upon request)</li>
+        <li><i class="fas fa-check-circle"></i> Customs fast track</li>
+      </ul>
+      <a href="#footer" class="service-btn">Book VIP Service <i class="fas fa-arrow-right"></i></a>
+    </div>
+    
+    <!-- SIM CARD -->
+    <div class="service-box">
+      <div class="service-icon">
+        <i class="fas fa-sim-card"></i>
+      </div>
+      <h3>TRAVEL SIM CARD</h3>
+      <div class="price-tag">From 120 000 VND</div>
+      <ul class="service-features">
+        <li><i class="fas fa-check-circle"></i> High-speed 5G connectivity</li>
+        <li><i class="fas fa-check-circle"></i> Airport delivery & setup</li>
+        <li><i class="fas fa-check-circle"></i> Multiple data packages</li>
+      </ul>
+      <img src="images/anhsim.png" alt="Vietnammobile SIM" class="sim-thumbnail">
+      <a href="#footer" class="service-btn">Order SIM <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+  
+  <!-- FAST TRACK VISUAL -->
+  <div class="fasttrack-comparison">
+    <div class="comparison-header">
+      <h3>Fast Track vs Regular Processing</h3>
+      <p>Save valuable time upon arrival</p>
+    </div>
+    <img src="images/fastrack.jpg" alt="Fast Track vs Regular Line Comparison" class="comparison-image">
+  </div>
 
-      <table class="sim-table">
-        <thead>
-          <tr>
-            <th>Plan</th>
-            <th>Data</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>eSIM</td>
-            <td>7 days</td>
-            <td>150k</td>
-          </tr>
-          <tr>
-            <td>SIM</td>
-            <td>10 days</td>
-            <td>200k</td>
-          </tr>
-          <tr>
-            <td>eSIM</td>
-            <td>900k</td>
-            <td>1.050k</td>
-          </tr>
-          <tr>
-            <td>Sim CIM</td>
-            <td>1.050k</td>
-            <td>2.000k</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <a href="#contact" class="sim-button">📞 Contact to order SIM</a>
+  <!-- FAST TRACK PROCEDURE -->
+  <div class="process-container">
+    <h3 class="process-title">Our Fast Track Procedure</h3>
+    <div class="process-steps">
+      <div class="step-box">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>Personal Greeting</h4>
+          <p>Our staff will welcome you at the Visa/Immigration Area with a personalized name sign.</p>
+        </div>
+      </div>
+      <div class="step-box">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>Visa Assistance</h4>
+          <p>We assist with Visa-on-Arrival or expedite the immigration stamping process.</p>
+        </div>
+      </div>
+      <div class="step-box">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>Priority Processing</h4>
+          <p>Escort through dedicated lanes for swift immigration clearance.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="car-service">
-  <h2>Intercity Transport from Airport</h2>
-
-  <div class="car-table-container">
-    <table class="car-table">
-      <thead>
-        <tr>
-          <th>Route</th>
-          <th>Duration</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>HCM City Tour</td><td>4 hours</td><td>900,000</td></tr>
-        <tr><td>HCM City Tour</td><td>8 hours</td><td>1,300,000</td></tr>
-        <tr><td>Cu Chi Tunnels</td><td>7 hours</td><td>1,300,000</td></tr>
-        <tr><td>Binh Duong (30km)</td><td>One-way</td><td>450,000</td></tr>
-        <tr><td>Dong Nai</td><td>One-way</td><td>500,000</td></tr>
-        <tr><td>SG - Vung Tau</td><td>One-way</td><td>1,100,000</td></tr>
-        <tr><td>SG - Ho Tram</td><td>One-way</td><td>1,100,000</td></tr>
-        <tr><td>SG - Phan Thiet</td><td>One-way</td><td>Contact</td></tr>
-        <tr><td>SG - Nha Trang</td><td>One-way</td><td>2,800,000</td></tr>
-        <tr><td>Mekong Delta (My Tho)</td><td>9 hours</td><td>1,500,000</td></tr>
-        <tr><td>SG - Ben Tre - SG</td><td>10 hours</td><td>1,800,000</td></tr>
-        <tr><td>SG - Cai Be - SG</td><td>10 hours</td><td>1,800,000</td></tr>
-        <tr><td>SG - Can Tho</td><td>One-way</td><td>1,500,000</td></tr>
-      </tbody>
-    </table>
-    <p class="car-note">7-seater cars: Toyota Innova, Fortuner, Xpander, Ertiga, Ford Everest</p>
+<!-- TOUR INFORMATION -->
+<section class="tours-section section-padding">
+  <div class="section-header">
+    <h2>Transportation & Tours</h2>
+    <p class="section-subtitle">Premium vehicles with professional drivers</p>
+  </div>
+  
+  <div class="tour-container">
+    <div class="tour-box">
+      <div class="tour-header">
+        <h3><i class="fas fa-route"></i> TOURS & TRANSPORT</h3>
+        <p class="tour-subtitle">Comfortable private transfers throughout Vietnam</p>
+      </div>
+      
+      <div class="tour-table-container">
+        <table class="tour-table">
+          <thead>
+            <tr>
+              <th>Route</th>
+              <th>Duration</th>
+              <th>Price (VND)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fas fa-city"></i> HCMC City Tour</td>
+              <td>4 hours</td>
+              <td>900,000</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-city"></i> HCMC City Tour</td>
+              <td>8 hours</td>
+              <td>1,300,000</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-tunnel"></i> Cu Chi Tunnels</td>
+              <td>7 hours</td>
+              <td>1,300,000</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-umbrella-beach"></i> Vung Tau</td>
+              <td>One way</td>
+              <td>1,100,000</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-island-tropical"></i> Nha Trang</td>
+              <td>One way</td>
+              <td>2,800,000</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-water"></i> Mekong Delta</td>
+              <td>9 hours</td>
+              <td>1,500,000</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="vehicle-info">
+          <p><i class="fas fa-car"></i> <strong>Vehicle Options:</strong> Innova, Fortuner, Xpander, Everest (7-seater)</p>
+          <p><i class="fas fa-star"></i> <strong>Premium Options:</strong> Mercedes V-Class, Limousine available upon request</p>
+        </div>
+        
+        <a href="#footer" class="tour-button">
+          <i class="fas fa-calendar-check"></i> Book Transportation
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
-<footer id="footer">
-  <div class="footer-contact">
-    <p><strong>Quick Contact:</strong></p>
-    <div class="social-icons">
-      <a href="https://zalo.me/84867788" target="_blank" title="Zalo">
-        <img src="images/zalo.jpg" alt="Zalo">
-      </a>
-      <a href="https://t.me/your_telegram" target="_blank" title="Telegram">
-        <img src="images/tele.jpg" alt="Telegram">
-      </a>
-      <a href="https://wa.me/84867788" target="_blank" title="WhatsApp">
-        <img src="images/whatsap.jpg" alt="WhatsApp">
-      </a>
-      <a href="sms:+84867788" title="Send SMS">
-        <img src="images/whatsap.jpg" alt="SMS">
-      </a>
-      <a href="https://line.me/ti/p/yourlineid" target="_blank" title="LINE">
-        <img src="images/line.jpg" alt="LINE">
-      </a>
-      <a href="https://open.kakao.com/o/yourkakao" target="_blank" title="KakaoTalk">
-        <img src="images/kakatalk.jpg" alt="KakaoTalk">
-      </a>
-    </div>
-    <p><strong>📧 Email:</strong> <a href="mailto:saigoncar84@gmail.com">saigoncar84@gmail.com</a></p>
-    <p><strong>🌐 Website:</strong> <a href="https://www.sgairportservices.com" target="_blank">sgairportservices.com</a></p>
+<!-- WHY CHOOSE US -->
+<section class="why-choose section-padding">
+  <div class="section-header">
+    <h2>Why Choose Our Services?</h2>
+    <p class="section-subtitle">The premium airport experience you deserve</p>
   </div>
-  <p class="copyright">© 2025 Saigon Airport Services</p>
+  
+  <div class="benefits-grid">
+    <div class="benefit-box">
+      <div class="benefit-icon">
+        <i class="fas fa-clock"></i>
+      </div>
+      <h4>Time Saving</h4>
+      <p>Reduce airport processing time by up to 90% with our priority services.</p>
+    </div>
+    
+    <div class="benefit-box">
+      <div class="benefit-icon">
+        <i class="fas fa-user-tie"></i>
+      </div>
+      <h4>Professional Staff</h4>
+      <p>Multilingual concierge team trained to highest hospitality standards.</p>
+    </div>
+    
+    <div class="benefit-box">
+      <div class="benefit-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h4>Hassle-Free</h4>
+      <p>We handle all formalities so you can relax after your flight.</p>
+    </div>
+    
+    <div class="benefit-box">
+      <div class="benefit-icon">
+        <i class="fas fa-headset"></i>
+      </div>
+      <h4>24/7 Support</h4>
+      <p>Round-the-clock assistance for all your travel needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials section-padding">
+  <div class="section-header">
+    <h2>Client Experiences</h2>
+    <p class="section-subtitle">What our valued customers say</p>
+  </div>
+
+  <div class="testimonial-container">
+
+    <div class="testimonial-box">
+      <div class="testimonial-content">
+        <img src="images/khachhang1.jpg" alt="Michael Johnson" class="client-photo-rect">
+        <h5 class="client-name">Michael </h5>
+        <p class="client-location">USA</p>
+        <p class="testimonial-text">"Saved me over an hour. The fast track is worth every penny!"</p>
+      </div>
+    </div>
+
+    <div class="testimonial-box">
+      <div class="testimonial-content">
+        <img src="images/khachhang2.jpg" alt="Sarah Chen" class="client-photo-rect">
+        <h5 class="client-name">Helana</h5>
+        <p class="client-location">Australia</p>
+        <p class="testimonial-text">"Staff was waiting at the gate and helped us all the way through. Super easy!"</p>
+      </div>
+    </div>
+
+    <div class="testimonial-box">
+      <div class="testimonial-content">
+        <img src="images/khachhang3.jpg" alt="Lucas Müller" class="client-photo-rect">
+        <h5 class="client-name">Byun Hyun Bun</h5>
+        <p class="client-location">Germany</p>
+        <p class="testimonial-text">"Professional, efficient, and really friendly service. Highly recommended."</p>
+      </div>
+    </div>
+
+    <div class="testimonial-box">
+      <div class="testimonial-content">
+        <img src="images/khachhang4.jpg" alt="Aya Tanaka" class="client-photo-rect">
+        <h5 class="client-name">Jenifer</h5>
+        <p class="client-location">Japan</p>
+        <p class="testimonial-text">"Helped me through immigration quickly. I didn’t worry about anything!"</p>
+      </div>
+    </div>
+
+    <div class="testimonial-box">
+      <div class="testimonial-content">
+        <img src="images/khachhang5.jpg" alt="John Smith" class="client-photo-rect">
+        <h5 class="client-name">Uncle Mike</h5>
+        <p class="client-location">United Kingdom</p>
+        <p class="testimonial-text">"Truly VIP experience. Seamless from landing to baggage collection."</p>
+      </div>
+    </div>
+
+    <div class="testimonial-box">
+      <div class="testimonial-content">
+        <img src="images/khachhang10.jpg" alt="Camila López" class="client-photo-rect">
+        <h5 class="client-name">Signe</h5>
+        <p class="client-location">Argentina</p>
+        <p class="testimonial-text">"I traveled alone and felt completely cared for. Amazing service."</p>
+      </div>
+    </div>
+
+    <div class="testimonial-box">
+      <div class="testimonial-content">
+        <img src="images/khachhang7.jpg" alt="David Brown" class="client-photo-rect">
+        <h5 class="client-name">Taewoong</h5>
+        <p class="client-location">South Korea</p>
+        <p class="testimonial-text">"They arranged everything perfectly. Best airport assistance ever!"</p>
+      </div>
+    </div>
+
+    <div class="testimonial-box">
+      <div class="testimonial-content">
+        <img src="images/khachhang8.jpg" alt="Nguyen Thi Lan" class="client-photo-rect">
+        <h5 class="client-name">Huang Wiyuanm</h5>
+        <p class="client-location">China</p>
+        <p class="testimonial-text">"我对服务非常满意，工作人员既友好又专业."</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- CONTACT FOOTER -->
+<footer id="footer" class="footer-section">
+  <div class="footer-container">
+    <div class="footer-column logo-column">
+      <img src="images/logo-text-white.png" alt="VIP Airport Services Logo" class="footer-logo">
+      <p class="footer-about">Premium airport concierge services at Tan Son Nhat International Airport, providing seamless travel experiences since 2015.</p>
+      <div class="social-links">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/84987654321" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Gọi điện -->
+  <a href="tel:+84987654321">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <!-- Zalo (dùng hình ảnh vì không có icon Font Awesome) -->
+  <a href="https://zalo.me/0867706788" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" style="width: 20px; height: 20px;">
+  </a>
+</div>
+
+    </div>
+    
+    <div class="footer-column contact-column">
+      <h4>Contact Us</h4>
+      <ul class="contact-list">
+        <li>
+          <i class="fas fa-map-marker-alt"></i>
+          <span>123 Airport Boulevard, Tan Binh District, HCMC</span>
+        </li>
+        <li>
+          <i class="fas fa-phone-alt"></i>
+          <span><a href="tel:+84987654321">+84 987 654 321</a></span>
+        </li>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <span><a href="mailto:info@vipairportservice.com">info@vipairportservice.com</a></span>
+        </li>
+        <li>
+          <i class="fas fa-clock"></i>
+          <span>24/7 Service Availability</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="footer-column quick-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#services"><i class="fas fa-chevron-right"></i> Service Packages</a></li>
+        <li><a href="#taxi-guide"><i class="fas fa-chevron-right"></i> Airport Guide</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+      </ul>
+    </div>
+    
+    
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2023 VIP Airport Services. All Rights Reserved.</p>
+    <div class="payment-methods">
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-mastercard"></i>
+      <i class="fab fa-cc-paypal"></i>
+      <i class="fas fa-money-bill-wave"></i>
+    </div>
+  </div>
 </footer>
 
+<!-- FLOATING ACTION BUTTONS -->
+<div class="floating-buttons">
+  <!-- Zalo (dùng ảnh) -->
+  <a href="https://zalo.me/0931313953" class="float-btn zalo-btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" style="width: 20px; height: 20px;">
+  </a>
+
+  <!-- WhatsApp (Font Awesome) -->
+  <a href="https://wa.me/84867706788" class="float-btn whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Gọi điện -->
+  <a href="tel:+84867706788" class="float-btn call-btn">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+</div>
+
+
+
 <script>
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-    .then(reg => console.log('Service Worker registered'))
-    .catch(err => console.log('Registration failed'));
-}
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-menu');
+    const toggle = document.querySelector('.nav-toggle');
+    nav.classList.toggle('active');
+    toggle.classList.toggle('active');
+  }
+  
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
 </script>
 </body>
 </html>
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("navLinks");
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-  }
-</script>
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("navLinks");
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-  }
-</script>
-
