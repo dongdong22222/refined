@@ -601,14 +601,32 @@ ul {
 }
 
 .sim-thumbnail {
-  max-width: 220px;
-  margin: 1rem auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
   display: block;
-  transition: var(--transition);
+  border-radius: 10px;
+  object-fit: cover;
+  animation: simPulse 2.5s infinite ease-in-out;
+  transition: transform 0.4s ease;
 }
 
+/* Hover: thêm hiệu ứng zoom và nghiêng nhẹ */
 .sim-thumbnail:hover {
-  transform: rotate(5deg) scale(1.1);
+  transform: scale(1.08) rotate(3deg);
+}
+
+/* Keyframe cho hiệu ứng chính */
+@keyframes simPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 0 0 rgba(255, 165, 0, 0.0);
+  }
+  50% {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 0 12px rgba(255, 140, 0, 0.6);
+  }
 }
 
 /* ===== FAST TRACK COMPARISON ===== */
